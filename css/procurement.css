@@ -1,0 +1,176 @@
+/* =========================
+   IT Asset Procurement Page
+   Page-only styles (uses global.css)
+   ========================= */
+
+.svc-hero{
+  position: relative;
+  padding-top: calc(var(--nav-h) + 42px);
+  padding-bottom: 56px;
+  color: var(--text);
+  background:
+    radial-gradient(900px 420px at 14% 18%, rgba(31,111,235,.26), transparent 60%),
+    radial-gradient(900px 420px at 86% 22%, rgba(89,168,255,.14), transparent 60%),
+    linear-gradient(180deg, var(--dark), var(--dark-2));
+  border-bottom: 1px solid var(--line-dark);
+  overflow: hidden;
+}
+
+.svc-hero::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(10,13,18,0), rgba(10,13,18,.55));
+  pointer-events:none;
+}
+
+.svc-hero-grid{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.svc-kicker{
+  display:inline-flex;
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: rgba(234,240,255,.82);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.svc-title{
+  margin: 0;
+  font-size: clamp(34px, 3.6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.svc-sub{
+  margin: 14px 0 18px;
+  color: rgba(234,240,255,.74);
+  max-width: 68ch;
+  line-height: 1.75;
+}
+
+.svc-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.svc-chips{
+  margin-top: 16px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.svc-chips span{
+  font-size: 12px;
+  color: rgba(234,240,255,.72);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+.svc-panel{
+  border: 1px solid rgba(255,255,255,.14);
+  background:
+    radial-gradient(520px 260px at 18% 12%, rgba(89,168,255,.11), transparent 55%),
+    rgba(255,255,255,.06);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.svc-panel h3{
+  margin:0 0 10px 0;
+  font-size: 18px;
+  letter-spacing: -.01em;
+}
+
+.svc-panel ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 14px 0;
+  display:grid;
+  gap: 10px;
+}
+.svc-panel li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color: rgba(234,240,255,.76);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.tick{
+  width: 18px;
+  height: 18px;
+  border-radius: 8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(31,111,235,.16);
+  border: 1px solid rgba(31,111,235,.28);
+  color: rgba(234,240,255,.92);
+  flex: 0 0 auto;
+  margin-top: 1px;
+  font-size: 12px;
+}
+
+.scope-grid{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.proc-steps{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.step{
+  border: 1px solid rgba(14,17,22,.08);
+  border-radius: 16px;
+  padding: 16px;
+  background: linear-gradient(180deg, #ffffff, #f7f9fd);
+}
+.step strong{
+  display:block;
+  margin-bottom: 8px;
+  font-weight: 950;
+  letter-spacing: -.01em;
+}
+.step p{
+  margin: 0;
+  color: var(--muted-dark);
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px){
+  .svc-hero-grid{ grid-template-columns: 1fr; }
+  .scope-grid{ grid-template-columns: repeat(2, 1fr); }
+  .proc-steps{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px){
+  .scope-grid{ grid-template-columns: 1fr; }
+  .proc-steps{ grid-template-columns: 1fr; }
+  .svc-actions .btn{ width: 100%; }
+}

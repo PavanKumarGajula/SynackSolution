@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SynAck Solutions | Managed IT & Cybersecurity</title>
+  <link rel="stylesheet" href="./css/homeStyle.css" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <script src="/js/main.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="navbar-mount"></div>   <!-- navbar injects here -->
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section class="hero" id="top" aria-label="SynAck Solutions hero">
+ 
+  <div class="container hero-grid">
+ 
+    <!-- ══════════════════════════════════════
+         LEFT — Copy
+    ══════════════════════════════════════ -->
+    <div class="hero-copy">
+ 
+      <p class="hero-eyebrow">Managed IT &bull; Cybersecurity &bull; Cloud</p>
+ 
+      <h1 class="hero-title">
+        Stop Reacting
+        to IT Problems.<br>
+        <span class="hero-title-accent">Start Preventing Them.</span>
+      </h1>
+ 
+      <p class="hero-sub">
+        SynAck Solutions designs stable, secure IT systems for
+        businesses that can't afford downtime — backed by senior
+        engineers who respond fast and own every outcome.
+      </p>
+ 
+      <div class="hero-actions">
+        <a href="/pages/contact.html" class="btn-hero-primary">
+          Get a Free IT Assessment
+        </a>
+        <a href="#services" class="btn-hero-ghost">
+          See How We Work
+          <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 7h8M8 4l3 3-3 3"/>
+          </svg>
+        </a>
+      </div>
+ 
+      <div class="hero-trust" role="list" aria-label="Key differentiators">
+ 
+        <span class="trust-pill" role="listitem">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+          Response &lt; 15 min
+        </span>
+ 
+        <span class="trust-pill" role="listitem">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3l7 4v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          Security-first
+        </span>
+ 
+        <span class="trust-pill" role="listitem">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.5 18.5h10.2a3.3 3.3 0 00.6-6.6 5.2 5.2 0 00-10-1.3A3.6 3.6 0 007.5 18.5z"/>
+          </svg>
+          Microsoft Partner
+        </span>
+ 
+      </div>
+    </div>
+ 
+    <!-- ══════════════════════════════════════
+         RIGHT — Dashboard panel
+    ══════════════════════════════════════ -->
+    <div class="hero-right-wrap">
+ 
+      <!-- Particle canvas behind the card -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+ 
+      <div class="hero-dashboard" role="img" aria-label="SynAck Solutions live operations dashboard">
+ 
+        <!-- Top bar -->
+        <div class="dash-topbar">
+          <span class="dash-topbar-label">SynAck Solutions — Operations</span>
+          <span class="dash-live" aria-label="Live status">
+            <span class="dash-live-dot"></span>
+            Live
+          </span>
+        </div>
+ 
+        <div class="dash-body">
+ 
+          <!-- Network health -->
+          <div>
+            <p class="dash-section-label">Network Health</p>
+            <div class="health-row">
+              <span class="health-label">Overall uptime</span>
+              <span class="health-pct" id="uptime-pct">0%</span>
+            </div>
+            <div class="health-bar-track">
+              <div class="health-bar-fill" id="health-bar"></div>
+            </div>
+          </div>
+ 
+          <div class="dash-divider"></div>
+ 
+          <!-- Active tickets -->
+          <div>
+            <p class="dash-section-label">Recent Activity</p>
+            <div class="ticket-list" id="ticket-list">
+ <div class="ticket-track" id="ticket-track">
+              <div class="ticket-row" data-delay="0">
+                <div class="ticket-id-name">
+                  <span class="ticket-id">#1044</span>
+                  <span class="ticket-name">Patch deployment — 47 endpoints</span>
+                </div>
+                <span class="ticket-status resolved">&#10003; Resolved</span>
+                <span class="ticket-time">2 min</span>
+              </div>
+ 
+              <div class="ticket-row" data-delay="120">
+                <div class="ticket-id-name">
+                  <span class="ticket-id">#1043</span>
+                  <span class="ticket-name">Suspicious login — blocked</span>
+                </div>
+                <span class="ticket-status resolved">&#10003; Resolved</span>
+                <span class="ticket-time">8 min</span>
+              </div>
+ 
+              <div class="ticket-row" data-delay="240">
+                <div class="ticket-id-name">
+                  <span class="ticket-id">#1042</span>
+                  <span class="ticket-name">New user onboarding</span>
+                </div>
+                <span class="ticket-status progress">&#8226; In progress</span>
+                <span class="ticket-time">Now</span>
+              </div>
+ 
+              <div class="ticket-row" data-delay="360">
+                <div class="ticket-id-name">
+                  <span class="ticket-id">#1041</span>
+                  <span class="ticket-name">Firewall rule review</span>
+                </div>
+                <span class="ticket-status scheduled">&#9679; Scheduled</span>
+                <span class="ticket-time">Today</span>
+              </div>
+ </div>
+            </div>
+          </div>
+ 
+          <div class="dash-divider"></div>
+ 
+          <!-- Metrics row -->
+          <div class="dash-metrics">
+ 
+            <!-- Security score -->
+            <div class="metric-card">
+              <span class="metric-card-label">Security Score</span>
+              <div class="score-arc-wrap">
+                <svg class="score-svg" viewBox="0 0 52 52" aria-hidden="true">
+                  <circle class="score-track" cx="26" cy="26" r="20"/>
+                  <circle class="score-fill" id="score-arc" cx="26" cy="26" r="20"/>
+                </svg>
+                <div class="score-text-group">
+                  <span class="metric-card-value">
+                    <span id="score-num" class="green">0</span>
+                    <span class="accent" style="font-size:16px;">/100</span>
+                  </span>
+                  <span class="metric-card-sub">Baseline met</span>
+                </div>
+              </div>
+            </div>
+ 
+            <!-- Response SLA -->
+            <div class="metric-card">
+              <span class="metric-card-label">Avg Response</span>
+              <span class="metric-card-value">
+                <span id="resp-num">0</span>
+                <span class="accent" style="font-size:16px;">min</span>
+              </span>
+              <span class="metric-card-sub">SLA: &lt;15 min — met</span>
+              <!-- Bar sparkline (last 7 days) -->
+              <div class="sparkline" aria-hidden="true" id="sparkline">
+                <div class="spark-bar" data-h="55"></div>
+                <div class="spark-bar" data-h="70"></div>
+                <div class="spark-bar" data-h="45"></div>
+                <div class="spark-bar" data-h="80"></div>
+                <div class="spark-bar" data-h="60"></div>
+                <div class="spark-bar" data-h="50"></div>
+                <div class="spark-bar today" data-h="75"></div>
+              </div>
+            </div>
+ 
+          </div>
+ 
+        </div><!-- /dash-body -->
+      </div><!-- /hero-dashboard -->
+    </div><!-- /hero-right-wrap -->
+ 
+  </div><!-- /hero-grid -->
+</section>
+
+
+ 
+<!-- ============================================================
+     TECH STRIP SECTION
+     Drop this between hero and problems section.
+     To add/remove technologies: edit .ticker-items div only.
+     The duplicate .ticker-items is intentional — creates
+     the seamless infinite loop.
+============================================================ -->
+<section class="tech-strip" aria-label="Technologies we work with">
+  <div class="tech-strip-inner">
+ 
+    <!-- Pinned label -->
+    <span class="tech-strip-label">Technologies We Work With</span>
+    <span class="tech-strip-divider" aria-hidden="true"></span>
+ 
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+      <div class="ticker-track" role="list" aria-label="Technology stack">
+ 
+        <!-- ── ORIGINAL SET ── -->
+        <div class="ticker-items" style="display:flex;gap:10px;flex-shrink:0;">
+ 
+          <!-- Microsoft Ecosystem -->
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft 365
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Azure
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Intune
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Defender
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Entra ID
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            SharePoint
+          </span>
+ 
+          <!-- Networking & Security -->
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-network"></span>
+            Cisco
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-security"></span>
+            Rhombus
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-security"></span>
+            Brivio
+          </span>
+ 
+          <!-- Device Management -->
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-device"></span>
+            Apple Business Manager
+          </span>
+          <span class="tech-chip" role="listitem">
+            <span class="tech-chip-dot dot-device"></span>
+            NinjaRMM
+          </span>
+ 
+          <!-- Spacer between sets -->
+          <span style="width:24px;flex-shrink:0;" aria-hidden="true"></span>
+ 
+        </div>
+ 
+        <!-- ── DUPLICATE SET (seamless loop) ── -->
+        <div class="ticker-items" style="display:flex;gap:10px;flex-shrink:0;" aria-hidden="true">
+ 
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft 365
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Azure
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Intune
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Defender
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            Microsoft Entra ID
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-microsoft"></span>
+            SharePoint
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-network"></span>
+            Cisco
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-security"></span>
+            Rhombus
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-security"></span>
+            Brivio
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-device"></span>
+            Apple Business Manager
+          </span>
+          <span class="tech-chip">
+            <span class="tech-chip-dot dot-device"></span>
+            NinjaRMM
+          </span>
+ 
+          <span style="width:24px;flex-shrink:0;" aria-hidden="true"></span>
+ 
+        </div>
+ 
+      </div><!-- /ticker-track -->
+    </div><!-- /ticker-wrap -->
+ 
+  </div><!-- /tech-strip-inner -->
+</section>
+  <!-- =====================
+     SECTION 2 — PROBLEMS YOU SOLVE (LIGHT)
+     Put this RIGHT AFTER the hero section
+====================== -->
+<section class="problems" id="problems">
+  <div class="container">
+ 
+    <!-- Header -->
+    <div class="sec-header">
+      <h2 class="sec-title">Sound Familiar?</h2>
+      <p class="sec-sub">
+        These are the exact problems SynAck Solutions was built to solve —
+        every one of them, under one roof.
+      </p>
+    </div>
+ 
+    <!-- 4 Cards -->
+    <div class="cards-grid">
+ 
+      <!-- ── Card 1: Firefighting ── -->
+      <div class="pcard">
+        <div class="pcard-head">
+          <div class="pcard-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 3"/>
+            </svg>
+          </div>
+          <span class="pcard-title">IT runs on firefighting</span>
+        </div>
+        <p class="pcard-desc">
+          Outages, equipment delays, unreliable meetings. No standard, no system, no ownership.
+        </p>
+ 
+        <div class="pcard-visual">
+          <div class="ticket-queue" id="tq">
+            <div class="tq-row" data-d="0">
+              <span class="tq-dot red"></span>
+              <span class="tq-label">WiFi down — floor 2</span>
+              <span class="tq-time">3 days open</span>
+            </div>
+            <div class="tq-row" data-d="100">
+              <span class="tq-dot amber"></span>
+              <span class="tq-label">Printer won't connect</span>
+              <span class="tq-time">8 days open</span>
+            </div>
+            <div class="tq-row" data-d="200">
+              <span class="tq-dot red"></span>
+              <span class="tq-label">VPN keeps dropping</span>
+              <span class="tq-time">2 weeks open</span>
+            </div>
+            <div class="tq-row" data-d="300">
+              <span class="tq-dot amber"></span>
+              <span class="tq-label">New hire still waiting</span>
+              <span class="tq-time">5 days open</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="pcard-tags">
+          <span class="ptag">Managed IT</span>
+          <span class="ptag">Help Desk</span>
+          <span class="ptag">Asset Procurement</span>
+          <span class="ptag">AV Setup</span>
+        </div>
+      </div>
+ 
+      <!-- ── Card 2: Security ── -->
+      <div class="pcard">
+        <div class="pcard-head">
+          <div class="pcard-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l7 4v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
+              <path d="M12 8v5M12 16h.01"/>
+            </svg>
+          </div>
+          <span class="pcard-title">More exposed than you think</span>
+        </div>
+        <p class="pcard-desc">
+          Weak access controls, untrained staff, unmonitored cameras, untested backups.
+        </p>
+ 
+        <div class="pcard-visual">
+          <div class="threat-wrap" id="tw">
+            <div>
+              <div class="threat-bar-label">
+                <span>Endpoint protection</span>
+                <span style="color:#F87171;">Critical</span>
+              </div>
+              <div class="threat-bar-track">
+                <div class="threat-bar-fill fill-red" data-w="78"></div>
+              </div>
+            </div>
+            <div>
+              <div class="threat-bar-label">
+                <span>Email security</span>
+                <span style="color:#FBBF24;">At risk</span>
+              </div>
+              <div class="threat-bar-track">
+                <div class="threat-bar-fill fill-amber" data-w="52"></div>
+              </div>
+            </div>
+            <div>
+              <div class="threat-bar-label">
+                <span>Identity controls</span>
+                <span style="color:#FBBF24;">At risk</span>
+              </div>
+              <div class="threat-bar-track">
+                <div class="threat-bar-fill fill-amber" data-w="41"></div>
+              </div>
+            </div>
+            <div class="threat-alert">
+              <span class="threat-alert-dot"></span>
+              Backup restore untested — 94 days
+            </div>
+          </div>
+        </div>
+ 
+        <div class="pcard-tags">
+          <span class="ptag">Cybersecurity</span>
+          <span class="ptag">Awareness Training</span>
+          <span class="ptag">Physical Security</span>
+          <span class="ptag">Backup &amp; DR</span>
+        </div>
+      </div>
+ 
+      <!-- ── Card 3: No steering ── -->
+      <div class="pcard">
+        <div class="pcard-head">
+          <div class="pcard-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 8v4M12 16h.01"/>
+            </svg>
+          </div>
+          <span class="pcard-title">Nobody steering your IT</span>
+        </div>
+        <p class="pcard-desc">
+          No roadmap, no budget clarity, too many vendors. Expensive decisions without guidance.
+        </p>
+ 
+        <div class="pcard-visual">
+          <div class="roadmap-wrap">
+            <div class="roadmap-q">
+              <div class="q-chip">Q1</div>
+              <div class="q-chip">Q2</div>
+              <div class="q-chip">Q3</div>
+              <div class="q-chip">Q4</div>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-label">Security</span>
+              <div class="roadmap-track"></div>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-label">Cloud</span>
+              <div class="roadmap-track"></div>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-label">Network</span>
+              <div class="roadmap-track"></div>
+            </div>
+            <div class="roadmap-row">
+              <span class="roadmap-label">Hardware</span>
+              <div class="roadmap-track"></div>
+            </div>
+            <div class="roadmap-empty">No roadmap defined</div>
+          </div>
+        </div>
+ 
+        <div class="pcard-tags">
+          <span class="ptag">IT Strategy</span>
+          <span class="ptag">vCIO Advisory</span>
+          <span class="ptag">Co-Managed IT</span>
+        </div>
+      </div>
+ 
+      <!-- ── Card 4: Foundation ── -->
+      <div class="pcard">
+        <div class="pcard-head">
+          <div class="pcard-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="9" height="9" rx="2"/>
+              <rect x="13" y="2" width="9" height="9" rx="2"/>
+              <rect x="2" y="13" width="9" height="9" rx="2"/>
+              <rect x="13" y="13" width="9" height="9" rx="2"/>
+            </svg>
+          </div>
+          <span class="pcard-title">Foundation not built to scale</span>
+        </div>
+        <p class="pcard-desc">
+          Unreliable Wi-Fi, ungoverned M365, unsegmented network. What worked at 10 breaks at 50.
+        </p>
+ 
+        <div class="pcard-visual">
+          <div class="network-wrap">
+            <svg class="net-svg" viewBox="0 0 260 130" fill="none">
+              <!-- Broken connection lines -->
+              <line x1="130" y1="65" x2="60"  y2="30"  stroke="rgba(248,113,113,.35)" stroke-width="1.2" stroke-dasharray="4 3"/>
+              <line x1="130" y1="65" x2="200" y2="30"  stroke="rgba(251,191,36,.30)"  stroke-width="1.2" stroke-dasharray="4 3"/>
+              <line x1="130" y1="65" x2="40"  y2="100" stroke="rgba(248,113,113,.30)" stroke-width="1.2" stroke-dasharray="4 3"/>
+              <line x1="130" y1="65" x2="220" y2="100" stroke="rgba(251,191,36,.28)"  stroke-width="1.2" stroke-dasharray="4 3"/>
+              <line x1="130" y1="65" x2="130" y2="115" stroke="rgba(89,168,255,.25)"  stroke-width="1.2" stroke-dasharray="4 3"/>
+ 
+              <!-- Centre node — main router -->
+              <circle cx="130" cy="65" r="16" fill="rgba(31,111,235,.15)" stroke="rgba(89,168,255,.35)" stroke-width="1.2"/>
+              <text x="130" y="69" text-anchor="middle" font-size="8" fill="rgba(89,168,255,.80)" font-family="Inter,sans-serif" font-weight="600">Core</text>
+ 
+              <!-- Broken nodes -->
+              <circle cx="60"  cy="30"  r="11" fill="rgba(248,113,113,.10)" stroke="rgba(248,113,113,.35)" stroke-width="1" stroke-dasharray="3 2"/>
+              <text x="60"  y="34"  text-anchor="middle" font-size="7" fill="rgba(248,113,113,.70)" font-family="Inter,sans-serif">WiFi</text>
+ 
+              <circle cx="200" cy="30"  r="11" fill="rgba(251,191,36,.08)"  stroke="rgba(251,191,36,.30)"  stroke-width="1" stroke-dasharray="3 2"/>
+              <text x="200" y="34"  text-anchor="middle" font-size="7" fill="rgba(251,191,36,.70)"  font-family="Inter,sans-serif">M365</text>
+ 
+              <circle cx="40"  cy="100" r="11" fill="rgba(248,113,113,.08)" stroke="rgba(248,113,113,.30)" stroke-width="1" stroke-dasharray="3 2"/>
+              <text x="40"  y="104" text-anchor="middle" font-size="7" fill="rgba(248,113,113,.65)" font-family="Inter,sans-serif">VPN</text>
+ 
+              <circle cx="220" cy="100" r="11" fill="rgba(251,191,36,.08)"  stroke="rgba(251,191,36,.28)"  stroke-width="1" stroke-dasharray="3 2"/>
+              <text x="220" y="104" text-anchor="middle" font-size="7" fill="rgba(251,191,36,.65)"  font-family="Inter,sans-serif">Cloud</text>
+ 
+              <circle cx="130" cy="115" r="11" fill="rgba(89,168,255,.08)"  stroke="rgba(89,168,255,.22)"  stroke-width="1" stroke-dasharray="3 2"/>
+              <text x="130" y="119" text-anchor="middle" font-size="7" fill="rgba(89,168,255,.60)"  font-family="Inter,sans-serif">Backup</text>
+ 
+              <!-- Break indicators -->
+              <text x="88"  y="44"  font-size="9" fill="rgba(248,113,113,.70)" font-family="Inter,sans-serif">✕</text>
+              <text x="168" y="44"  font-size="9" fill="rgba(251,191,36,.70)"  font-family="Inter,sans-serif">?</text>
+              <text x="78"  y="88"  font-size="9" fill="rgba(248,113,113,.65)" font-family="Inter,sans-serif">✕</text>
+              <text x="178" y="88"  font-size="9" fill="rgba(251,191,36,.65)"  font-family="Inter,sans-serif">?</text>
+            </svg>
+          </div>
+        </div>
+ 
+        <div class="pcard-tags">
+          <span class="ptag">Cloud &amp; M365</span>
+          <span class="ptag">Network Infra</span>
+        </div>
+      </div>
+ 
+    </div><!-- /cards-grid --> 
+  </div>
+</section>
+
+<!-- =====================
+     SECTION 3 — HOW SYNACK HELPS (SPLIT / PREMIUM)
+     Replace your current helps section with this
+====================== -->
+<section class="section helps" id="services">
+    <div class="container helps-wrap">
+    <!-- LEFT: copy + CTA -->
+    <div class="helps-copy">
+      <p class="eyebrow">How we help</p>
+      <h2>How SynAck Helps</h2>
+      <p class="helps-lead">
+        Clear coverage across IT, security, cloud, and strategy — delivered with fast response and real accountability.
+      </p>
+
+      <ul class="helps-bullets">
+        <li>
+          <span class="dot" aria-hidden="true"></span>
+          Proactive monitoring to prevent issues before they impact your team
+        </li>
+        <li>
+          <span class="dot" aria-hidden="true"></span>
+          Security-first support that reduces risk and keeps things compliant
+        </li>
+      </ul>
+
+      <div class="helps-cta">
+        <a class="btn btn-primary" href="#contact">View All Services</a>
+        <a class="btn btn-ghost" href="#support">Talk to Support</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: stacked feature rows -->
+    <div class="helps-stack" aria-label="Service highlights">
+      <!-- Row 1 -->
+      <article class="helps-row">
+        <div class="helps-row-top">
+          <div class="helps-ico" aria-hidden="true">
+            <!-- monitor -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13C19.33 4 20 4.67 20 5.5v8.5c0 .83-.67 1.5-1.5 1.5h-13C4.67 16 4 15.33 4 14V5.5Z"/>
+              <path d="M9 20h6"/>
+              <path d="M12 16v4"/>
+            </svg>
+          </div>
+          <span class="helps-badge">01</span>
+        </div>
+        <h3>Managed IT &amp; Help Desk</h3>
+        <p>Day-to-day support with proactive monitoring and fast response.</p>
+      </article>
+
+      <!-- Row 2 -->
+      <article class="helps-row">
+        <div class="helps-row-top">
+          <div class="helps-ico" aria-hidden="true">
+            <!-- shield -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3l7 4v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4Z"/>
+              <path d="M9.5 12l1.8 1.8L15 10"/>
+            </svg>
+          </div>
+          <span class="helps-badge">02</span>
+        </div>
+        <h3>Cybersecurity</h3>
+        <p>Reduce risk with modern protection for users, devices, and data.</p>
+      </article>
+
+      <!-- Row 3 -->
+      <article class="helps-row">
+        <div class="helps-row-top">
+          <div class="helps-ico" aria-hidden="true">
+            <!-- cloud -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7.5 18.5h10.2a3.3 3.3 0 0 0 .6-6.6 5.2 5.2 0 0 0-10-1.3A3.6 3.6 0 0 0 7.5 18.5Z"/>
+            </svg>
+          </div>
+          <span class="helps-badge">03</span>
+        </div>
+        <h3>Cloud &amp; Microsoft Services</h3>
+        <p>Microsoft 365, Azure, migrations, and performance optimization.</p>
+      </article>
+
+      <!-- Row 4 -->
+      <article class="helps-row">
+        <div class="helps-row-top">
+          <div class="helps-ico" aria-hidden="true">
+            <!-- compass -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/>
+              <path d="M14.8 9.2l-1.6 5.6-5.6 1.6 1.6-5.6 5.6-1.6Z"/>
+            </svg>
+          </div>
+          <span class="helps-badge">04</span>
+        </div>
+        <h3>IT Strategy &amp; Consulting</h3>
+        <p>Roadmaps, budgeting, and smarter decisions that scale with you.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+SECTION 4 — WHY SYNACK (MINIMAL)
+====================== -->
+<section class="section why-min" id="why-synack">
+  <div class="container why-min-wrap">
+
+    <div class="why-min-head">
+      <p class="eyebrow">Why SynAck</p>
+      <h2>Built for Stability, Security, and Scale</h2>
+      <p class="why-min-lead">
+        SynAck Solutions helps organizations eliminate reactive IT
+        and replace it with structured, secure operations.
+      </p>
+    </div>
+
+    <div class="why-min-grid">
+      <div class="why-item"><span class="why-num">01</span><p><strong>Proactive operations</strong> — issues prevented, not reacted to</p></div>
+      <div class="why-item"><span class="why-num">02</span><p><strong>Security-first by default</strong> across endpoint, network, and cloud</p></div>
+      <div class="why-item"><span class="why-num">03</span><p><strong>Senior engineers</strong> — no call centers or outsourced support</p></div>
+      <div class="why-item"><span class="why-num">04</span><p><strong>Enterprise-ready systems</strong> that scale with your organization</p></div>
+    </div>
+
+
+    <div class="why-min-trust">
+      <span>Microsoft Partner Ecosystem</span>
+      <span>Azure & Microsoft 365</span>
+      <span>Intune & Device Management</span>
+      <span>Security & Compliance</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- =====================
+SECTION 5 — TRUSTED IT PARTNER
+====================== -->
+<section class="section trusted-min">
+  <div class="container trusted-min-wrap">
+
+    <h2>A Trusted IT Partner</h2>
+
+    <p class="trusted-min-lead">
+      SynAck Solutions partners with organizations that value stability,
+      security, and predictable IT outcomes.
+    </p>
+
+    <div class="trusted-min-metrics">
+      <div class="metric">
+        <span class="metric-big">99%</span>
+        <span class="metric-label">Client satisfaction</span>
+      </div>
+      <div class="metric">
+        <span class="metric-big">650+</span>
+        <span class="metric-label">Projects delivered</span>
+      </div>
+      <div class="metric">
+        <span class="metric-big">24/7</span>
+        <span class="metric-label">Monitoring & support</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =====================
+SECTION 6 — TESTIMONIALS (Company Reviews + Logos)
+===================== -->
+<section class="section reviews" id="testimonials">
+  <div class="container reviews-wrap">
+
+    <header class="reviews-head">
+      <p class="eyebrow">What Our Clients Say</p>
+      <h2>Trusted by Teams That Need IT Done Right</h2>
+      <p class="reviews-lead">
+        Feedback from organizations that rely on SynAck for stable, secure, and predictable IT operations.
+      </p>
+      <!-- ADD THIS -->
+  <a href="#reviews" class="reviews-viewall">View all reviews →</a>
+    </header>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <article class="review-card">
+        <div class="review-top">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <span class="review-pill">Managed IT • Security</span>
+        </div>
+
+        <p class="review-quote">
+          “SynAck brought structure to our IT operations — fewer disruptions, better security, and clear accountability.”
+        </p>
+
+        <div class="review-bottom">
+          <div class="review-company">
+            <strong>Manufacturing Company</strong>
+            <span>Maryland</span>
+          </div>
+
+          <!-- You will replace src -->
+          <div class="review-logo">
+            <img src="./logos/client-manufacturing.png" alt="Manufacturing Company logo">
+          </div>
+        </div>
+      </article>
+
+      <!-- Review 2 -->
+      <article class="review-card">
+        <div class="review-top">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <span class="review-pill">Help Desk • Microsoft 365</span>
+        </div>
+
+        <p class="review-quote">
+          “Fast response, strong communication, and real engineers. We finally feel in control of our IT.”
+        </p>
+
+        <div class="review-bottom">
+          <div class="review-company">
+            <strong>Logistics Organization</strong>
+            <span>Multi-site</span>
+          </div>
+
+          <div class="review-logo">
+            <img src="./logos/client-logistics.png" alt="Logistics Organization logo">
+          </div>
+        </div>
+      </article>
+
+      <!-- Review 3 -->
+      <article class="review-card">
+        <div class="review-top">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <span class="review-pill">Endpoint • Compliance</span>
+        </div>
+
+        <p class="review-quote">
+          “Security and device management improved immediately. Their processes are solid and well-documented.”
+        </p>
+
+        <div class="review-bottom">
+          <div class="review-company">
+            <strong>Multi-site Business</strong>
+            <span>Operations</span>
+          </div>
+
+          <div class="review-logo">
+            <img src="./logos/client-multisite.png" alt="Multi-site Business logo">
+          </div>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =====================
+SECTION 7 — FINAL CTA (INLINE BAR / PREMIUM)
+===================== -->
+<section class="cta-bar" id="assessment">
+  <div class="container cta-bar-wrap">
+    <div class="cta-bar-inner">
+      <div class="cta-bar-copy">
+        <p class="cta-bar-eyebrow">Ready to talk?</p>
+        <h2 class="cta-bar-title">Get a Free IT Assessment.</h2>
+        <p class="cta-bar-lead">
+          A clear plan, risk review, and next steps — built for your environment.
+        </p>
+      </div>
+
+      <div class="cta-bar-actions">
+        <a class="cta-bar-btn primary" href="#contact">Get a Free IT Assessment</a>
+        <a class="cta-bar-btn secondary" href="#support">Talk to a SynAck Engineer</a>
+        <p class="cta-bar-note">No pressure. Clear answers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div id="footer-mount"></div>   <!-- footer injects here -->
+
+
+</body>
+  <script src="/js/homepage.js" ></script>
+</html>

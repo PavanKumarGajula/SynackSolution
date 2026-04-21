@@ -1,0 +1,169 @@
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+
+    <!-- BRAND -->
+    <a href="/index.html" class="brand" aria-label="SynAck Solutions — Home">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="12" fill="url(#brand-grad)"/>
+          <path d="M12 20 L20 13 L28 20" stroke="#EAF0FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M12 20 L20 27 L28 20" stroke="#59A8FF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs>
+            <linearGradient id="brand-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#1F6FEB"/>
+              <stop offset="100%" stop-color="#0B2A5B"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <span class="brand-text">SynAck <span style="color:var(--brand-400); font-weight:500;">Solutions</span></span>
+    </a>
+
+    <!-- DESKTOP LINKS -->
+    <div class="nav-links" role="list">
+
+      <!-- Services dropdown -->
+      <div class="dd" role="listitem">
+        <a href="/pages/services/index.html" class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          Services <span class="dd-caret" aria-hidden="true">&#9660;</span>
+        </a>
+        <div class="dd-menu" role="menu" aria-label="Services menu">
+          <a href="/pages/services/managed-it.html" role="menuitem">
+            Managed IT &amp; Help Desk
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/services/cybersecurity.html" role="menuitem">
+            Cybersecurity
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/services/cloud-m365.html" role="menuitem">
+            Cloud &amp; Microsoft 365
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/services/network-infra.html" role="menuitem">
+            Network Infrastructure
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/services/it-strategy.html" role="menuitem">
+            IT Strategy &amp; Consulting
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/services/procurement.html" role="menuitem">
+            IT Asset Procurement
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Industries dropdown -->
+      <div class="dd" role="listitem">
+        <a href="/pages/industries/index.html" class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          Industries <span class="dd-caret" aria-hidden="true">&#9660;</span>
+        </a>
+        <div class="dd-menu" role="menu" aria-label="Industries menu">
+          <a href="/pages/industries/manufacturing.html" role="menuitem">
+            Manufacturing
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/industries/healthcare.html" role="menuitem">
+            Healthcare
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/industries/professional-services.html" role="menuitem">
+            Professional Services
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/industries/smb.html" role="menuitem">
+            Small &amp; Mid-Size Business
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company dropdown -->
+      <div class="dd" role="listitem">
+        <a href="/pages/company/about.html" class="dd-btn" aria-haspopup="true" aria-expanded="false">
+          Company <span class="dd-caret" aria-hidden="true">&#9660;</span>
+        </a>
+        <div class="dd-menu" role="menu" aria-label="Company menu">
+          <a href="/pages/company/about.html" role="menuitem">
+            About SynAck
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/company/leadership.html" role="menuitem">
+            Leadership
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+          <a href="/pages/company/service-areas.html" role="menuitem">
+            Service Areas
+            <span aria-hidden="true">&#8250;</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/pages/resources/index.html" role="listitem">Resources</a>
+
+    </div>
+
+    <!-- DESKTOP CTA -->
+    <div class="nav-cta">
+      <a href="tel:8885639132" class="btn btn-ghost" style="font-size:13px; padding:9px 14px;">
+        (888) 563-9132
+      </a>
+      <a href="/pages/contact.html" class="btn btn-primary" style="font-size:13px; padding:9px 16px;">
+        Free Assessment
+      </a>
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <button
+      class="nav-toggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      type="button"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div
+  class="mobile-menu"
+  id="mobile-nav"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Navigation menu"
+  aria-hidden="true"
+>
+  <div class="mobile-menu-inner">
+
+    <a href="/pages/services/index.html">Services</a>
+    <a href="/pages/services/managed-it.html" style="padding-left:24px; font-size:13px; opacity:.8;">Managed IT &amp; Help Desk</a>
+    <a href="/pages/services/cybersecurity.html" style="padding-left:24px; font-size:13px; opacity:.8;">Cybersecurity</a>
+    <a href="/pages/services/cloud-m365.html" style="padding-left:24px; font-size:13px; opacity:.8;">Cloud &amp; Microsoft 365</a>
+    <a href="/pages/services/network-infra.html" style="padding-left:24px; font-size:13px; opacity:.8;">Network Infrastructure</a>
+    <a href="/pages/services/it-strategy.html" style="padding-left:24px; font-size:13px; opacity:.8;">IT Strategy</a>
+    <a href="/pages/services/procurement.html" style="padding-left:24px; font-size:13px; opacity:.8;">IT Procurement</a>
+
+    <a href="/pages/industries/index.html">Industries</a>
+    <a href="/pages/industries/manufacturing.html" style="padding-left:24px; font-size:13px; opacity:.8;">Manufacturing</a>
+    <a href="/pages/industries/healthcare.html" style="padding-left:24px; font-size:13px; opacity:.8;">Healthcare</a>
+    <a href="/pages/industries/professional-services.html" style="padding-left:24px; font-size:13px; opacity:.8;">Professional Services</a>
+    <a href="/pages/industries/smb.html" style="padding-left:24px; font-size:13px; opacity:.8;">SMB</a>
+
+    <a href="/pages/company/about.html">Company</a>
+    <a href="/pages/company/leadership.html" style="padding-left:24px; font-size:13px; opacity:.8;">Leadership</a>
+    <a href="/pages/company/service-areas.html" style="padding-left:24px; font-size:13px; opacity:.8;">Service Areas</a>
+
+    <a href="/pages/resources/index.html">Resources</a>
+
+    <a href="/pages/contact.html" class="mobile-cta primary">Get a Free Assessment</a>
+    <a href="tel:8885639132" class="mobile-cta">(888) 563-9132</a>
+
+  </div>
+</div>

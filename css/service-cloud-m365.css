@@ -1,0 +1,58 @@
+/* =========================
+   Cloud & Microsoft 365 Overrides
+   Uses: global.css + service-detail.css
+   Keep SMALL.
+   ========================= */
+
+/* Hero glow: “cloudy” but still SynAck */
+.svc-hero-cloud{
+  background:
+    radial-gradient(900px 520px at 18% 18%, rgba(89,168,255,.16), transparent 62%),
+    radial-gradient(900px 520px at 85% 22%, rgba(31,111,235,.14), transparent 60%),
+    radial-gradient(700px 360px at 55% 78%, rgba(89,168,255,.10), transparent 60%),
+    linear-gradient(180deg, var(--dark), var(--dark-2));
+}
+
+/* Pill style */
+.svc-pill-cloud{
+  border-color: rgba(89,168,255,.22);
+  background: rgba(89,168,255,.08);
+}
+
+/* Hero right visual image */
+.svc-cloud-media{
+  margin-top: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  overflow: hidden;
+}
+
+.svc-cloud-media img{
+  width: 100%;
+  height: 150px;      /* keep hero lean */
+  object-fit: cover;
+  display: block;
+  opacity: .92;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Included section accents */
+.inc-ico-cloud{
+  border-color: rgba(89,168,255,.18);
+  background: rgba(89,168,255,.08);
+  color: rgba(31,111,235,.95);
+}
+
+/* Included section right image */
+.svc-inc-visual-cloud .inc-img{
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Deliverables icon accent */
+.delv-ico-cloud{
+  border-color: rgba(89,168,255,.18);
+  background: rgba(89,168,255,.08);
+  color: rgba(31,111,235,.95);
+}
